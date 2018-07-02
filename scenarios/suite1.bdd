@@ -1,0 +1,13 @@
+
+
+SCENARIO: Test1auto
+META-DATA: {"description":"Sample Test Scenario"}
+
+	Given get 'http://www.google.co.in'
+	Then verify 'name=q' is present
+	When sendKeys 'QMetry' into 'name=q'
+	Then verify link with partial text 'QMetry application 123'
+	
+	
+END
+
